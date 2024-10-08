@@ -4,11 +4,11 @@ const { Telegraf } = require('telegraf');
 const axios = require('axios');
 
 // Use environment variables for sensitive information
-const botToken = '7573829141:AAEX4nVXSMCa-nd9dnX5kV0aF9kZbtozt_o';
-const apiKey = '898758845ada41278c394e44c3a83040';
-const visionApiKey = 'd425b3f1e31844d8b5f1db363a9f8204';
-const endpoint = 'https://ryantextanalyticsservice.cognitiveservices.azure.com';
-const visionEndpoint = 'https://visionappapi.cognitiveservices.azure.com/vision/v3.2';
+const botToken = process.env.BOT_TOKEN;
+const apiKey = process.env.TEXT_ANALYTICS_KEY;
+const visionApiKey = process.env.VISION_API_KEY;
+const endpoint = process.env.TEXT_ANALYTICS_ENDPOINT;
+const visionEndpoint = process.env.VISION_API_ENDPOINT;
 
 const bot = new Telegraf(botToken);
 
